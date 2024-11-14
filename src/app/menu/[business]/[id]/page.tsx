@@ -28,7 +28,7 @@ import {
 import { useState } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import Image from "next/image";
-import { AlertCircle, Instagram } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 type FoodType = "HAMBURGUER" | "PETISCOS" | "BEBIDAS" | "SOBREMESAS";
 
@@ -37,7 +37,7 @@ interface Food {
   nome: string;
   valor: number;
   descricao?: string;
-  quantidade: number; // Novo campo adicionado
+  quantidade: number; 
   imagem: string;
 }
 
@@ -231,7 +231,7 @@ export default function Menu({
     },
   ];
 
-  const tabs: any[] = [
+  const tabs: { tipo: FoodType; icon: string }[] = [
     { tipo: "HAMBURGUER", icon: "icons8-fast-food-40.png" },
     { tipo: "PETISCOS", icon: "icon-potato.png" },
     { tipo: "BEBIDAS", icon: "icon-drink.png" },
